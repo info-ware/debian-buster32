@@ -9,7 +9,8 @@ RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y uuid-dev
 RUN apt-get install -y rsync
 RUN apt-get install -y libxext-dev
-
+RUN apt-get install -y joe
+RUN cp /etc/joe/jstarrc ~/.joerc
 
 RUN dpkg --add-architecture armhf
 RUN apt-get update && apt-get install -y libasound2-dev:armhf libgles2-mesa-dev:armhf
